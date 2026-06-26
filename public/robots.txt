@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://timeforge.pages.dev/sitemap.xml
+Sitemap: https://timestamps-upe.pages.dev/sitemap.xml

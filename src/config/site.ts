@@ -12,7 +12,7 @@ export const siteConfig = {
    *  部署到 Cloudflare Pages 子域名时填 https://your-project.pages.dev
    *  绑定自定义域名后改成 https://yourdomain.com
    */
-  siteUrl: 'https://timeforge.pages.dev',
+  siteUrl: 'https://timestamps-upe.pages.dev',
 
   /** 联系邮箱 — 用于隐私政策与 AdSense 审核。
    *  请改成真实邮箱，AdSense 审核员会验证可联系性。

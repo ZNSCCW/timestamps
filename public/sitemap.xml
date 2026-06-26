@@ -6,19 +6,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://timeforge.pages.dev/</loc>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://timeforge.pages.dev/?lang=zh"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://timeforge.pages.dev/?lang=en"/>
+    <loc>https://timestamps-upe.pages.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://timestamps-upe.pages.dev/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://timestamps-upe.pages.dev/?lang=en"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://timeforge.pages.dev/#/about</loc>
+    <loc>https://timestamps-upe.pages.dev/#/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://timeforge.pages.dev/#/privacy-policy</loc>
+    <loc>https://timestamps-upe.pages.dev/#/privacy-policy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
