@@ -22,7 +22,7 @@ export const siteConfig = {
   /** GitHub 仓库地址（用于 Footer 与隐私政策联系入口）。
    *  部署后改成你的真实仓库。
    */
-  githubUrl: 'https://github.com/your-name/timeforge',
+  githubUrl: 'https://github.com/ZNSCCW/timestamps',
 
   /** Google AdSense Publisher ID（格式: ca-pub-XXXXXXXXXXXXXXXX）。
    *  暂未接入时保持空字符串，广告位组件不会渲染实际广告。
