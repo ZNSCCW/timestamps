@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TimeForge — Unix 时间戳转换工具 | Timestamp Converter</title>
+    <meta name="description" content="免费在线 Unix 时间戳转换工具，支持时间戳与日期互转、多时区对照、相对时间计算与批量转换。纯前端、零数据收集。Free online Unix timestamp converter with timezone matrix, relative time calc and batch convert." />
+    <meta name="keywords" content="时间戳转换,Unix timestamp,timestamp converter,时间戳转日期,时区转换,epoch converter" />
+    <meta name="author" content="TimeForge" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TimeForge — Unix 时间戳转换工具" />
+    <meta property="og:description" content="精准、快速、无广告打扰的时间戳转换工具，面向开发者。" />
+    <meta property="og:image" content="/og-image.svg" />
+    <meta property="og:url" content="https://timeforge.pages.dev/" />
+    <meta property="og:site_name" content="TimeForge" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TimeForge — Unix 时间戳转换工具" />
+    <meta name="twitter:description" content="面向开发者的时间戳互转、时区对照与批量处理工具。" />
+    <meta name="twitter:image" content="/og-image.svg" />
+
+    <link rel="canonical" href="https://timeforge.pages.dev/" />
+    <link rel="alternate" hreflang="zh" href="https://timeforge.pages.dev/?lang=zh" />
+    <link rel="alternate" hreflang="en" href="https://timeforge.pages.dev/?lang=en" />
+
+    <!--
+      Google AdSense 脚本。
+      申请通过后，把下方注释打开并把 ca-pub-XXXXXXXXXXXXXXXX 改为你的 Publisher ID。
+      同时在 src/config/site.ts 把 adsenseEnabled 改为 true、adsensePublisherId 填入相同 ID。
+    -->
+    <!--
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+    -->
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TimeForge",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "description": "Free online Unix timestamp converter with timezone matrix, relative time calc and batch convert.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+
+    <script type="module">
+      // 防止主题闪烁：在应用挂载前应用已保存的主题
+      try {
+        const saved = localStorage.getItem('timeforge-prefs');
+        const theme = saved && JSON.parse(saved)?.state?.theme;
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        const final = theme || (prefersLight ? 'light' : 'dark');
+        if (final === 'light') document.documentElement.classList.add('light');
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

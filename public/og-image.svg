@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0E1A"/>
+      <stop offset="100%" stop-color="#13182A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0" r="0.6">
+      <stop offset="0%" stop-color="#C6FF3D" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#C6FF3D" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#232B45" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.4"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- 品牌标识 -->
+  <g transform="translate(100, 220)">
+    <circle cx="40" cy="40" r="36" fill="none" stroke="#C6FF3D" stroke-width="3"/>
+    <path d="M40 18v22l14 8" stroke="#C6FF3D" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <circle cx="40" cy="40" r="3" fill="#C6FF3D"/>
+  </g>
+  <text x="200" y="270" fill="#E8ECF5" font-family="'JetBrains Mono', monospace" font-size="72" font-weight="700">TimeForge</text>
+
+  <!-- 标语 -->
+  <text x="100" y="360" fill="#C6FF3D" font-family="'JetBrains Mono', monospace" font-size="28" font-weight="500" letter-spacing="4">PRECISION TIMESTAMP TOOL</text>
+
+  <!-- 时间戳示意 -->
+  <text x="100" y="440" fill="#8A93A8" font-family="'JetBrains Mono', monospace" font-size="36">1700000000 · 2023-11-14T22:13:20Z</text>
+
+  <!-- 副标语 -->
+  <text x="100" y="510" fill="#E8ECF5" font-family="'Outfit', sans-serif" font-size="28" font-weight="400">Unix timestamp converter · Timezone matrix · Batch · Bilingual</text>
+
+  <!-- 角标 -->
+  <rect x="100" y="550" width="180" height="36" rx="18" fill="none" stroke="#C6FF3D" stroke-width="1.5"/>
+  <circle cx="120" cy="568" r="3" fill="#C6FF3D"/>
+  <text x="135" y="575" fill="#C6FF3D" font-family="'Outfit', sans-serif" font-size="14" font-weight="500">Online · Free · No login</text>
+</svg>

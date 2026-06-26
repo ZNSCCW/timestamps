@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  站点地图。部署到自定义域名后请把 <loc> 中的域名替换为你的真实域名。
+  此文件为静态版（首页 + 关于 + 隐私政策），如需更精细的 lastmod 可改为构建时动态生成。
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://timeforge.pages.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://timeforge.pages.dev/?lang=zh"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://timeforge.pages.dev/?lang=en"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://timeforge.pages.dev/#/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://timeforge.pages.dev/#/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

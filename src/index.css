@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Dark theme (default) — 精密仪表盘 */
+    --c-bg: 10 14 26;          /* #0A0E1A */
+    --c-surface: 19 24 42;     /* #13182A */
+    --c-surface-2: 26 33 56;   /* #1A2138 */
+    --c-border: 35 43 69;      /* #232B45 */
+    --c-ink: 232 236 245;      /* #E8ECF5 */
+    --c-muted: 138 147 168;    /* #8A93A8 */
+    --c-accent: 198 255 61;    /* #C6FF3D */
+    --c-accent-soft: 155 204 47; /* #9BCC2F */
+    --c-danger: 255 99 99;
+  }
+
+  html.light {
+    /* Light theme — 米白 + 墨黑 */
+    --c-bg: 245 242 234;       /* #F5F2EA */
+    --c-surface: 255 255 255;
+    --c-surface-2: 237 233 221;/* #EDE9DD */
+    --c-border: 216 210 192;   /* #D8D2C0 */
+    --c-ink: 26 31 46;         /* #1A1F2E */
+    --c-muted: 92 98 117;      /* #5C6275 */
+    --c-accent: 90 143 0;      /* #5A8F00 */
+    --c-accent-soft: 120 170 30;
+    --c-danger: 200 60 60;
+  }
+
+  * {
+    border-color: rgb(var(--c-border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: rgb(var(--c-bg));
+    color: rgb(var(--c-ink));
+    font-family: 'Outfit', 'Noto Sans SC', system-ui, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgb(var(--c-accent) / 0.06), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgb(var(--c-accent) / 0.03), transparent);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background-color: rgb(var(--c-accent) / 0.25);
+    color: rgb(var(--c-ink));
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: rgb(var(--c-bg)); }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--c-border));
+    border-radius: 4px;
+    border: 2px solid rgb(var(--c-bg));
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgb(var(--c-muted)); }
+}
+
+@layer components {
+  .panel {
+    @apply bg-surface border border-border rounded;
+    background-image: linear-gradient(180deg, rgb(255 255 255 / 0.02), transparent);
+  }
+
+  .panel-hover {
+    @apply transition-all duration-200 hover:border-accent/40 hover:shadow-glow;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded px-4 py-2 text-sm font-medium
+           transition-all duration-150 select-none disabled:opacity-40 disabled:cursor-not-allowed;
+    min-height: 40px;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-muted hover:text-ink hover:bg-surface-2;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent text-bg hover:brightness-110 active:brightness-95 font-semibold;
+  }
+
+  .btn-outline {
+    @apply btn border border-border text-ink hover:border-accent/60 hover:text-accent;
+  }
+
+  .input {
+    @apply w-full bg-surface-2 border border-border rounded px-3 py-2.5 text-ink
+           placeholder:text-muted/60 font-mono text-sm
+           focus:outline-none focus:border-accent/70 focus:ring-2 focus:ring-accent/15
+           transition-all duration-150;
+  }
+
+  .label {
+    @apply block text-xs font-medium uppercase tracking-wider text-muted mb-2;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-border bg-surface-2
+           px-2.5 py-1 text-xs text-muted;
+  }
+
+  .mono {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-feature-settings: 'tnum' 1, 'zero' 1;
+  }
+
+  .grid-noise {
+    background-image:
+      linear-gradient(rgb(var(--c-border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--c-border) / 0.4) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-position: -1px -1px;
+  }
+}
